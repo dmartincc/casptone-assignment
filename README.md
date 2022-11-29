@@ -2,11 +2,11 @@
 
 We use a Constraint programming model to solve the assignment problem between teams and projects.
 
-Data input ($C_{i,j}$): A ranking matrix of preferences for each group and project.
+Data input $C_{i,j}$: A ranking matrix of preferences for each group and project.
 
 Decision variables:
 
-$x_{i,j}$ Binary variable: 1 if worker 𝑤∈𝑊 is working on task 𝑡∈𝑇 and 0 if not.
+$x_{i,j bvc}$ Binary variable: 1 if worker 𝑤∈𝑊 is working on task 𝑡∈𝑇 and 0 if not.
 
 The model:
 
