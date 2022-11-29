@@ -8,11 +8,11 @@ $C_{w,t}$ = Ranking matrix of preferences for each group and project.
 
 Decision variables:
 
-$x_{w,t}$ = A Binary variable equal to 1 if worker $𝑤∈𝑊$ is working on task $t∈𝑇$ and 0 if not.
+$x_{w,t}$ = A binary variable equal to 1 if worker $𝑤∈𝑊$ is working on task $t∈𝑇$ and 0 if not.
 
 Constants:
 
-$T_{w}$ = number workers that can be assigned to each task $𝑤∈𝑊$.
+$T_{w}$ = Number workers that can be assigned to each task $𝑤∈𝑊$.
 
 N = Maximum number of workers working in a task.
 
