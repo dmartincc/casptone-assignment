@@ -24,10 +24,10 @@ $$ \sum_{𝑤∈𝑊} \sum_{t∈𝑇} x_{w,t} · T_{w}  >= 1,  \forall 𝑤∈�
 
 $$ \sum_{t∈𝑇} \sum_{w∈𝑊} x_{w,t}  <= N,  \forall 𝑤∈𝑊 (3) $$
 
-$$ x_{w, t} ∈ {0, 1},  \forall w∈𝑊, \forall t∈𝑇  $$
+$$ x_{w, t} ∈ {0, 1},  \forall w∈𝑊, \forall t∈𝑇 (4) $$
 
 
-The objective (1) tries to minimize the total ranking for all teams and projects. This means to pick the least value from the rankings, first positions. Constraint (2) makes sure that each team is assigned to one project. Constraint (3) makes sure that each project is assigned no more than N times, proportional to the fraction between teams and projects. 
+The objective function (1) tries to minimize the total ranking for all teams and projects. This means to pick the least value from the rankings, first positions. Constraint (2) makes sure that each team is assigned to one project. Constraint (3) makes sure that each project is assigned no more than N times, proportional to the fraction between teams and projects. Assignment variables (4) force to be binary 0 or 1.
 
 
 
