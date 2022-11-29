@@ -30,7 +30,7 @@ def main():
     total_size_max = 1
     
     # Maximum total of workers sizes for any task
-    total_size_max_tasks = 2
+    total_size_max_tasks = round( num_workers / num_tasks )
 
     # Model
     model = cp_model.CpModel()
@@ -42,7 +42,7 @@ def main():
             x[worker, task] = model.NewBoolVar(f'x[{worker},{task}]')
 
     # Constraints
-    # Each worker is assigned at one task
+    # Each worker is assigned to one task
     for worker in range(num_workers):
         model.Add(
             sum(task_sizes[task] * x[worker, task]
@@ -71,7 +71,7 @@ def main():
         for worker in range(num_workers):
             for task in range(num_tasks):
                 if solver.BooleanValue(x[worker, task]):
-                    print(f'Group {worker} assigned to project {task}.' +
+                    print(f'Group {worker + 1} assigned to project {task + 1}.' +
                           f' Cost = {costs[worker][task]}')
     else:
         print('No solution found.')
