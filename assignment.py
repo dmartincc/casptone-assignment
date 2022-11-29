@@ -14,8 +14,6 @@ def main():
    
     num_workers = len(costs)
     num_tasks = len(costs[0])
-
-    task_sizes = [2, 2, 2, 2, 2, 2, 2, 2]
     
     # Maximum total of task sizes for any worker
     total_size_max = 1
@@ -36,7 +34,7 @@ def main():
     # Each worker is assigned to one task
     for worker in range(num_workers):
         model.Add(
-            sum(task_sizes[task] * x[worker, task]
+            sum(x[worker, task]
                 for task in range(num_tasks)) >= total_size_max)
 
     # Each task is assigned to no more than two workers
