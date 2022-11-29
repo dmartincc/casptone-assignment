@@ -23,11 +23,11 @@ $$ min \sum_{w∈𝑊} \sum_{t∈𝑇} x_{w, t} · C_{w, t} $$
 
 Subject to:
 
-$$ \sum_{𝑤∈𝑊} \sum_{t∈𝑇} x_{w,t} · T_{w}  >= 1 \> \forall 𝑤∈𝑊 $$
+$$ \sum_{𝑤∈𝑊} \sum_{t∈𝑇} x_{w,t} · T_{w}  >= 1 \\\\\\\ \forall 𝑤∈𝑊 $$
 
-$$ \sum_{t∈𝑇} \sum_{w∈𝑊} x_{w,t}  <= N \> \forall 𝑤∈𝑊 $$
+$$ \sum_{t∈𝑇} \sum_{w∈𝑊} x_{w,t}  <= N \\\\\\\ \forall 𝑤∈𝑊 $$
 
-$$ x_{w, t} ∈ {0, 1} \>  \forall w∈𝑊, \forall t∈𝑇  $$
+$$ x_{w, t} ∈ {0, 1} \\\\\\\  \forall w∈𝑊, \forall t∈𝑇  $$
 
 
 
