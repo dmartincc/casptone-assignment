@@ -11,6 +11,6 @@ $x_{i,j bvc}$ Binary variable: 1 if worker 𝑤∈𝑊 is working on task 𝑡�
 The model:
 
 
-$$ min z = \sum_{k=1} x_{i, j} $$
+$$ min z = \sum_{k=1} x_{i, j} · C_{i,j} $$
 
 
