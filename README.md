@@ -8,7 +8,7 @@ $C_{w,t}$ = Ranking matrix of preferences for each group and project.
 
 Decision variables:
 
-$x_{w,t}$ Binary variable: 1 if worker $𝑤∈𝑊$ is working on task $t∈𝑇$ and 0 if not.
+$x_{w,t}$ = A Binary variable equal to 1 if worker $𝑤∈𝑊$ is working on task $t∈𝑇$ and 0 if not.
 
 Constants:
 
@@ -23,11 +23,11 @@ $$ min \sum_{w∈𝑊} \sum_{t∈𝑇} x_{w, t} · C_{w, t} $$
 
 Subject to:
 
-$$ \sum_{𝑤∈𝑊} \sum_{t∈𝑇} x_{w,t} · T_{w}  >= 1 \thinspace \forall 𝑤∈𝑊 $$
+$$ \sum_{𝑤∈𝑊} \sum_{t∈𝑇} x_{w,t} · T_{w}  >= 1 \> \forall 𝑤∈𝑊 $$
 
-$$ \sum_{t∈𝑇} \sum_{w∈𝑊} x_{w,t}  <= N \thinspace \forall 𝑤∈𝑊 $$
+$$ \sum_{t∈𝑇} \sum_{w∈𝑊} x_{w,t}  <= N \> \forall 𝑤∈𝑊 $$
 
-$$ x_{w, t} ∈ {0, 1} \thinspace \forall w∈𝑊, \forall t∈𝑇  $$
+$$ x_{w, t} ∈ {0, 1} \>  \forall w∈𝑊, \forall t∈𝑇  $$
 
 
 
