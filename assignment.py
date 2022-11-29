@@ -1,26 +1,17 @@
+
+import csv
 from ortools.sat.python import cp_model
 
 
 def main():
     
     # Data - Ranking matrix of each worker preferences
-    costs = [
-        [7,	1,	7,	4,	6,	6,	5,	6],
-        [8,	6,	4,	2,	2,	4,	4,	6],
-        [6,	6,	6,	1,	4,	2,	8,	8],
-        [1,	1,	7,	3,	7,	1,	6,	3],
-        [8,	1,	8,	1,	4,	7,	2,	3],
-        [5,	4,	2,	1,	2,	4,	1,	8],
-        [2,	1,	4,	3,	2,	7,	6,	1],
-        [5,	5,	2,	6,	6,	4,	5,	4],
-        [1,	2,	5,	1,	6,	2,	4,	4],
-        [7,	5,	6,	8,	7,	2,	2,	7],
-        [4,	2,	8,	4,	3,	5,	5,	3],
-        [8,	6, 1,	2,	3,	8,	3,	5],
-        [8,	2,	2,	3,	7,	2,	1,	7],
-        [3,	2,	1,	7,	1,	5,	7,	2],
-        [2,	5,	8,	4,	8,	2,	1,	5]
-    ]
+    costs = []
+    with open("rankings.tsv") as file:
+        tsv_file = csv.reader(file, delimiter="\t")
+        for line in tsv_file:
+            costs.append([int(item) for item in line])
+   
     num_workers = len(costs)
     num_tasks = len(costs[0])
 
@@ -30,7 +21,7 @@ def main():
     total_size_max = 1
     
     # Maximum total of workers sizes for any task
-    total_size_max_tasks = round( num_workers / num_tasks )
+    total_size_max_tasks = round(num_workers / num_tasks)
 
     # Model
     model = cp_model.CpModel()
